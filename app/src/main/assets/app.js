@@ -1,7 +1,7 @@
+const pdfjsLib = window.pdfjsLib;
 
-import * as pdfjsLib from 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs';
-pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs';
-
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+  "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.js";
 const KEY='agia-data-v2';
 const demoBible={
   'João':{3:{16:'Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna.',17:'Porque Deus não enviou o seu Filho ao mundo para que condenasse o mundo, mas para que o mundo fosse salvo por ele.'}},
