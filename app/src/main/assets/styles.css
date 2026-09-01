@@ -1,0 +1,29 @@
+:root{--bg:#f8f6f0;--card:#fff;--ink:#20252b;--muted:#69717b;--line:#ddd8cd;--accent:#8b6a32;--dark:#18212b}
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink)}
+button,input,textarea,select{font:inherit} button{cursor:pointer}
+.top{height:68px;background:var(--dark);color:white;display:flex;align-items:center;gap:18px;padding:0 22px;position:sticky;top:0;z-index:10}
+.brand{font-weight:800;font-size:20px;margin-right:auto}.top button{background:transparent;border:0;color:white;padding:10px 12px;border-radius:9px}.top button:hover{background:#ffffff18}
+.layout{display:grid;grid-template-columns:230px 1fr;min-height:calc(100vh - 68px)}
+.nav{border-right:1px solid var(--line);padding:18px 12px;background:#f1eee7}.nav button{display:block;width:100%;text-align:left;border:0;background:transparent;padding:13px 14px;border-radius:10px;margin-bottom:4px}.nav button.active,.nav button:hover{background:#fff;box-shadow:0 1px 4px #0000000d}
+main{padding:28px;max-width:1400px;width:100%;margin:auto}.hero{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:22px}.hero h1{margin:0 0 6px;font-size:32px}.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 3px 14px #00000008}.card h2,.card h3{margin-top:0}.stat{font-size:28px;font-weight:800}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--line);background:#fff;padding:10px 14px;border-radius:10px}.btn.primary{background:var(--dark);color:white;border-color:var(--dark)}.btn.gold{background:var(--accent);color:white;border-color:var(--accent)}
+input,textarea,select{width:100%;border:1px solid var(--line);background:#fff;border-radius:10px;padding:11px}.field{margin-bottom:12px}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:5px}
+.list{display:grid;gap:10px}.item{border:1px solid var(--line);border-radius:12px;padding:13px;background:#fff}.item strong{display:block;margin-bottom:4px}
+.bible{max-width:850px;margin:auto;background:#fffdf8;border:1px solid var(--line);padding:34px;border-radius:18px;position:relative}.bible h1{text-align:center}.verse{padding:10px 12px;border-radius:8px;line-height:1.65;font-family:Georgia,serif;font-size:20px}.verse:hover{background:#f4efe3}.verse.selected{background:#eee4cf}.vnum{font-family:system-ui;font-weight:800;color:var(--accent);margin-right:8px}.readerbar{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
+.canvasWrap{position:relative}.ink{position:absolute;inset:0;width:100%;height:100%;touch-action:none;z-index:3}.ink.hidden{display:none}
+.tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin-bottom:16px}.tabs button{border:0;background:transparent;padding:10px 12px}.tabs button.active{border-bottom:2px solid var(--accent);font-weight:800}
+.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.day{min-height:90px;border:1px solid var(--line);background:#fff;border-radius:8px;padding:7px}.day small{font-weight:800}.event{margin-top:5px;background:#eee4cf;border-radius:5px;padding:3px;font-size:11px}
+.modal{position:fixed;inset:0;background:#0008;display:none;align-items:center;justify-content:center;padding:20px;z-index:30}.modal.open{display:flex}.modalbox{max-width:650px;width:100%;max-height:90vh;overflow:auto;background:#fff;border-radius:16px;padding:22px}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#18212b;color:#fff;padding:11px 16px;border-radius:10px;display:none;z-index:50}.toast.show{display:block}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.nav{display:flex;overflow:auto;border-right:0;border-bottom:1px solid var(--line);gap:5px}.nav button{white-space:nowrap;width:auto}.grid{grid-template-columns:1fr 1fr}main{padding:18px}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.top{padding:0 12px}.top button{display:none}.bible{padding:18px}.verse{font-size:18px}}
+body.dark{--bg:#101114;--card:#17191d;--ink:#f2f2f2;--muted:#a6abb3;--line:#30343b}
+body.dark .nav{background:#14171b} body.dark .btn,body.dark input,body.dark textarea,body.dark select{background:#1c2025;color:var(--ink);border-color:#383e46} body.dark .item,body.dark .day{background:#17191d}
+
+.pdf-toolbar{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:10px 0;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.pdfViewer{background:#d7d4cd;border-radius:16px;padding:18px;overflow:auto;min-height:70vh;display:flex;justify-content:center}
+.pdfPage{position:relative;display:inline-block;box-shadow:0 4px 18px #0003;background:white;line-height:0}
+.pdfPage canvas{display:block}
+.pdfInk{position:absolute;left:0;top:0;touch-action:none;z-index:2}
+.pdfInk.hidden{display:none}
+.dark .pdfViewer{background:#292d32}

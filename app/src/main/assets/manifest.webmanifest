@@ -1,0 +1,17 @@
+{
+  "name": "Agía",
+  "short_name": "Agía",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f8f6f0",
+  "theme_color": "#18212b",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
